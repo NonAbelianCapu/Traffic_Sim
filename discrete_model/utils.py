@@ -14,6 +14,7 @@ def estimate_flow(pos_grid,N,i,f):
     assert (f >= 0 and f <= L-1), "f out of bound"
 
     for row in pos_grid:
+
         temp_array = row[i:f]
         temp_flow = np.sum(temp_array)*(N/(L*T))
         flow.append(temp_flow)
@@ -21,9 +22,6 @@ def estimate_flow(pos_grid,N,i,f):
     return flow
 
 
-
-def vel_spec(pos_grid):
-    pass
 
 
 def plot_simulation(pos_grid):

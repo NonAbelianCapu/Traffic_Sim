@@ -5,7 +5,7 @@ import random
 def populate_arrays(pos,vel,N):
 
     for n in range(N):
-        pos[n] = 3*n
+        pos[n] = n
         vel[n] = np.random.randint(0,5)
 
 def dist(i,j,L,pos):
