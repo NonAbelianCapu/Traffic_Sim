@@ -40,14 +40,13 @@ def update_vel(pos,vel,p,L,v_max,N):
 def run_simulation(pos,vel,N,L,MAX_STEPS=250,p=0.1,v_max=5):
 
     pos_list = [np.zeros(L+1) for i in range(MAX_STEPS)]
-    vel_list = [np.zeros(L+1) for i in range(MAX_STEPS)]
 
     for step in range(MAX_STEPS):
 
         for i in range(N):
-            pos_list[step][int(pos[i])] = 1+int(vel[i])
+            pos_list[step][int(pos[i])] = int(vel[i])
 
         update_vel(pos,vel,p,L,v_max,N)
         pos = [(pos[i] + vel[i])%L for i in range(N)]
 
-    return pos_list,vel_list
+    return pos_list
