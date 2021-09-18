@@ -14,6 +14,8 @@ args = my_parser.parse_args()
 
 flow_list = []
 
+print("aaa")
+
 for nc in range(args.n_init, args.n_final):
 
     L = args.length

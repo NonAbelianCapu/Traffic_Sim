@@ -1,5 +1,5 @@
 import unittest
-import sim
+from src import sim 
 import numpy as np
 
 class Test(unittest.TestCase):
@@ -31,5 +31,5 @@ class Test(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    
+
     unittest.main()
